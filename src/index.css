@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --color-memphis-pink: #FF6B9D;
+  --color-memphis-coral: #FF8E72;
+  --color-memphis-yellow: #FFE66D;
+  --color-memphis-teal: #4ECDC4;
+  --color-memphis-mint: #A8E6CF;
+  --color-memphis-purple: #C7CEEA;
+  --color-memphis-orange: #FF9F43;
+  --color-memphis-blue: #54A0FF;
+  --color-memphis-dark: #2D3436;
+}
+
+:root {
+  --background: #F8F9FA;
+  --foreground: #2D3436;
+  --radius: 1rem;
+}
+
+* {
+  border-color: #2D3436;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--color-memphis-dark);
+  font-family: 'Comic Sans MS', 'Chalkboard', cursive, sans-serif;
+}
+
+.memphis-shadow {
+  box-shadow: 6px 6px 0 #2D3436;
+}
+
+.memphis-shadow-sm {
+  box-shadow: 4px 4px 0 #2D3436;
+}
+
+.memphis-shadow-hover:hover {
+  box-shadow: 8px 8px 0 #2D3436;
+  transform: translate(-2px, -2px);
+}
+
+.memphis-border {
+  border: 4px solid #2D3436;
+}
+
+.memphis-pattern {
+  background-image: 
+    radial-gradient(#2D3436 1px, transparent 1px),
+    radial-gradient(#2D3436 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.memphis-wave {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%234ECDC4'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes pulse-rotate {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-wobble {
+  animation: pulse-rotate 2s ease-in-out infinite;
+}

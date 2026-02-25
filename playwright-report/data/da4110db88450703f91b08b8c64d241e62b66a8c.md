@@ -1,0 +1,54 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e13]:
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - img [ref=e16]
+      - heading "MEMPHIS" [level=1] [ref=e21]
+      - img [ref=e22]
+    - generic [ref=e27]:
+      - img [ref=e28]
+      - generic [ref=e31]: 待办事项清单
+  - generic [ref=e34]:
+    - generic [ref=e35]:
+      - textbox "添加新的任务..." [ref=e36]
+      - generic:
+        - img
+    - generic [ref=e37]:
+      - button [ref=e38]
+      - button [ref=e39]
+      - button [ref=e40]
+      - button [ref=e41]
+      - button [ref=e42]
+      - button [ref=e43]
+    - button [disabled] [ref=e44]:
+      - img [ref=e45]
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "进度" [level=3] [ref=e49]
+      - generic [ref=e50]: 67%
+    - paragraph [ref=e53]: 2 / 3 任务完成
+  - generic [ref=e54]:
+    - generic [ref=e55]:
+      - button [ref=e59]:
+        - img [ref=e60]
+      - generic [ref=e63]:
+        - button [active] [ref=e64] [cursor=pointer]:
+          - img [ref=e65]
+        - generic [ref=e67]: 学习孟菲斯设计风格
+    - generic [ref=e70]:
+      - button [ref=e74]:
+        - img [ref=e75]
+      - generic [ref=e78]:
+        - button [ref=e79] [cursor=pointer]:
+          - img [ref=e80]
+        - generic [ref=e82]: 创建一个酷炫的 Todo App
+    - generic [ref=e85]:
+      - button [ref=e89]:
+        - img [ref=e90]
+      - generic [ref=e93]:
+        - button [ref=e94] [cursor=pointer]
+        - generic [ref=e95]: 享受设计的乐趣
+  - paragraph [ref=e99]: Made with ❤️ in Memphis Style
+```

@@ -18,8 +18,8 @@ test.describe('Test Suite 3: Completing Todos', () => {
     // - Checkbox shows checkmark, strikethrough
     await expect(firstTodo.locator('span.line-through')).toBeVisible();
 
-    // - Progress updates to 2/3 (66%)
-    await expect(page.getByText('66%')).toBeVisible();
+    // - Progress updates to 2/3 (67% — Math.round(2/3*100))
+    await expect(page.getByText('67%')).toBeVisible();
     await expect(page.getByText(/2\s*\/\s*3\s*任务完成/)).toBeVisible();
   });
 

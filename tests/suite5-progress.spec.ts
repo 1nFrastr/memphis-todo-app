@@ -10,9 +10,9 @@ test.describe('Test Suite 5: Progress Stats', () => {
   test.skip('Test 5.1: Progress Bar Updates', async ({ page }) => {
     const todoItems = page.locator('div.space-y-4 > div').filter({ has: page.locator('button') });
 
-    // Complete first todo
+    // Complete first todo (2/3 → 67%)
     await todoItems.nth(0).locator('button.flex-shrink-0').click();
-    await expect(page.getByText('66%')).toBeVisible();
+    await expect(page.getByText('67%')).toBeVisible();
 
     // Complete third todo
     await todoItems.nth(2).locator('button.flex-shrink-0').click();

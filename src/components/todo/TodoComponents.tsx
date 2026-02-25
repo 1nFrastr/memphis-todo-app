@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { colorClassToHex } from "@/lib/colorUtils"
 import { 
   Plus, 
   Trash2, 
@@ -26,11 +27,6 @@ const COLORS = [
   "bg-[#C7CEEA]",
 ] as const
 
-/** 从 Tailwind 的 bg-[#hex] 类名里取出真正的 hex 颜色，供 inline style 使用 */
-function colorClassToHex(colorClass: string): string {
-  const match = colorClass.match(/#[\da-fA-F]{6}/)
-  return match ? match[0] : "#FF6B9D"
-}
 
 const DECORATIONS = [
   <Star key="star" className="w-6 h-6 text-[#FFE66D] animate-wobble" />,

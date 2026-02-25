@@ -7,7 +7,7 @@ test.describe('Test Suite 3: Completing Todos', () => {
     await expect(page.getByText('33%')).toBeVisible();
   });
 
-  test.skip('Test 3.1: Complete an Incomplete Todo', async ({ page }) => {
+  test('Test 3.1: Complete an Incomplete Todo', async ({ page }) => {
     const todoItems = page.locator('div.space-y-4 > div').filter({ has: page.locator('button') });
     const firstTodo = todoItems.nth(0);
     await expect(firstTodo.getByText('学习孟菲斯设计风格')).toBeVisible();
